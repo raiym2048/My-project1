@@ -10,7 +10,7 @@ public class mech : MonoBehaviour
 {
     // Start is called before the first frame update
     public Text score;
-    public int counter = 0;
+    public static int counter = 0;
     private void Start()
     {
         score.text = "Score: "+ counter+1;
