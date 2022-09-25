@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
         }
         else if(rb.velocity.x == 17.08f)
         {
-            rb.velocity = new Vector2(-speed, rb.velocity.y);
+            //rb.velocity = new Vector2(-speed, rb.velocity.y);
             //Right = true;
         }
         if(Right)

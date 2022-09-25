@@ -13,7 +13,7 @@ public class mech : MonoBehaviour
     public static int counter = 0;
     private void Start()
     {
-        score.text = "Score: "+ counter+1;
+        score.text = "Score: "+ counter;
     }
     //public int counter = 0;
     private void OnTriggerEnter2D(Collider2D collision)

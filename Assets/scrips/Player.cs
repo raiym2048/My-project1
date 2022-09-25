@@ -49,12 +49,7 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene(0);
         }
 
-        Flip();
-       
-        CheckGround();
-        CheckUp();
-        //Jump();//
-        Attack();
+        
         
 
 
@@ -63,6 +58,12 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(-joystick.Horizontal * speed, rb.velocity.y);
+        Flip();
+
+        CheckGround();
+        CheckUp();
+        //Jump();//
+        Attack();
         if (!isGrounded)
             anim.SetInteger("State", 10);
         else
