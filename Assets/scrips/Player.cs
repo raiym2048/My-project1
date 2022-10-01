@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame//     P@ssword
     void Update()
     {
+        transform.position += new Vector3(-joystick.Horizontal * speed * Time.deltaTime, 0f, 0f);
         time += Time.deltaTime;
         //Debug.Log(IsNotdelay);
 
@@ -49,15 +50,7 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene(0);
         }
 
-        
-        
-
-
-    }
-    
-    private void FixedUpdate()
-    {
-        rb.velocity = new Vector2(-joystick.Horizontal * speed, rb.velocity.y);
+        //rb.velocity = new Vector2(-joystick.Horizontal * speed, rb.velocity.y);
         Flip();
 
         CheckGround();
@@ -76,6 +69,14 @@ public class Player : MonoBehaviour
         {
             anim.SetInteger("State", 1);
         }
+
+
+
+    }
+    
+    private void FixedUpdate()
+    {
+        
         
         
     }
