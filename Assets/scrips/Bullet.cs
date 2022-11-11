@@ -13,13 +13,17 @@ public class Bullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(collision);
-        Destroy(gameObject);
-        collision.GetComponent<Renderer>().enabled = false;
+        if(collision.gameObject.tag == "GroundD")
+        {
+            Destroy(collision);
+            Destroy(gameObject);
+            collision.GetComponent<Renderer>().enabled = false;
+        }
+        
     }
     void Update()
     {
-        if(transform.position.x > 70 || transform.position.x < -30)
+        if(transform.position.x > 150 || transform.position.x < -30)
         {
             Destroy(gameObject);
         }

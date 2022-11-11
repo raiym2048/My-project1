@@ -1,4 +1,5 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -18,6 +19,7 @@ public class mech : MonoBehaviour
     //public int counter = 0;
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Console.WriteLine(collision.gameObject.tag);
         if (collision.gameObject.tag == "Player")
         {
             gameObject.GetComponent<Renderer>().enabled = false;

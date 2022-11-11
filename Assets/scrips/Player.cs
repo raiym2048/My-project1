@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     Rigidbody2D rb;
     float time = 0f;
 
+    
+
    // public Button button;
 
     public Joystick joystick;
@@ -35,12 +37,21 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
-    
+    public void setSpeed(float speed)
+    {
+        this.speed = speed;
+    }
+    public float getSpeed()
+    {
+        return speed;
+    }
+
 
 
     // Update is called once per frame//     P@ssword
     void Update()
     {
+        
         transform.position += new Vector3(-joystick.Horizontal * speed * Time.deltaTime, 0f, 0f);
         time += Time.deltaTime;
         //Debug.Log(IsNotdelay);
