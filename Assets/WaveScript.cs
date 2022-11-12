@@ -20,18 +20,21 @@ public class WaveScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Console.WriteLine(player.getSpeed());
 
         if (collision.gameObject.tag == "Player")
         {
-            player.setSpeed((player.getSpeed()/2f));
+            player.setSpeed((player.getSpeed() / 2f));
 
         }
-        
+
 
 
     }
-  /*  private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
+        Console.WriteLine(player.getSpeed());
+
         if (collision.gameObject.tag == "Player")
         {
             player.setSpeed((player.getSpeed() * 2f));
@@ -40,5 +43,5 @@ public class WaveScript : MonoBehaviour
 
 
 
-    }*/
+    }
 }
